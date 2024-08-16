@@ -1,6 +1,6 @@
 <?php 
 
-	include_once 'conexao.php';
+	include_once 'dbConnect.php';
 
 	$id = $_GET['id'];
 
@@ -8,6 +8,5 @@
 
 	if (mysqli_affected_rows($conn) > 0) {
 
-		header("Location:mostrar.php");
+		header("Location: ../user-interface/listOrders.php'.php");
 	}
-?>

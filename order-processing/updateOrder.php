@@ -1,7 +1,7 @@
 <?php 
 	
-	include_once 'form_editar.php';
-	include_once 'conexao.php';
+	include_once 'editOrderForm.php';
+	include_once 'dbConnect.php';
 
 	$id = $_GET['id'];
 	$nome  = isset($_POST['nome'])?$_POST['nome']:"";
@@ -11,7 +11,5 @@
 	$alterar = $conn->query("update tb_cadpedido set nome ='$nome', endereco ='$endereco', pedido ='$pedido' where id='$id'");
 	
 	if(mysqli_affected_rows($conn) > 0){
-		header("location: mostrar.php");
+		header("location: ../user-interface/listOrders.php");
 	}
-	
-?>

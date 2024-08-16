@@ -27,12 +27,10 @@
                         <th style="color: #bb1111; font-family: Arial;">Pedido</th>
                     </tr>
                 </thead>
-
                 <tbody>
-                                
-                    <?php include_once 'consultar.php' ?>
+                    <?php include_once '../order-processing/getOrder.php'; ?>
                     <tr>
-                        <a href="form_cadastro.php" style="box-shadow:inset 0px 1px 0px 0px #cf866c;
+                        <a href="newOrderForm.php" style="box-shadow:inset 0px 1px 0px 0px #cf866c;
                         background:linear-gradient(to bottom, #bb1111 5%, #bc3315 100%);
                         background-color:#bb1111;
                         border-radius:9px;
@@ -46,9 +44,7 @@
                         text-decoration:none;
                         text-shadow:0px 1px 0px #854629;" class="btn">Tela Cadastro</a>
                     </tr>
-
                 </tbody>
-
             </table>
         </div>		
     </div>	

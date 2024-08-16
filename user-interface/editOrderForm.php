@@ -1,7 +1,7 @@
-<?php include_once 'conexao.php';?>
+<?php include_once '../order-processing/dbConnect.php'; ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 	<title>Página do Administrador de Cadastro Mysqli</title>
 	<meta charset="utf-8">
@@ -11,7 +11,7 @@
 background: linear-gradient(90deg, rgba(254,255,13,1) 0%, rgba(230,208,0,1) 35%, rgba(255,132,0,1) 100%);">
 	<?php 
 
-		include_once 'conexao.php';
+		include_once '../order-processing/dbConnect.php';
 
 		$id = $_GET['id'];
 	
@@ -30,10 +30,10 @@ background: linear-gradient(90deg, rgba(254,255,13,1) 0%, rgba(230,208,0,1) 35%,
 				<div class="panel-body">
 					<div style="color: #bb1111; font-family: Arial;" class="panel-heading text-center display-4"><h2>ALTERAR DADOS</h2></div>
 
-    				<form action="alterar.php?id=<?php echo $id;?>"
+    				<form action="../order-processing/updateOrder.php?id=<?php echo $id;?>"
     						 method="post" accept-charset="utf-8" class="form-group">
 
-    					<label style="color: #bb1111; font-family: Arial;"" for="nome">Nome:</label>
+    					<label style="color: #bb1111; font-family: Arial;" for="nome">Nome:</label>
     					<input type="text" name="nome" value="<?php echo $nome;?>" class="form-control">
     					<br>
                         <br>
@@ -59,20 +59,20 @@ background: linear-gradient(90deg, rgba(254,255,13,1) 0%, rgba(230,208,0,1) 35%,
                                 padding:9px 24px;
                                 text-decoration:none;
                                 text-shadow:0px 1px 0px #854629;" type="submit" name="btn" value="ALTERAR" class="btn btn-success">
-    					<a style="box-shadow:inset 0px 1px 0px 0px #cf866c;
-                                background:linear-gradient(to bottom, #bb1111 5%, #bc3315 100%);
-                                background-color:#bb1111;
-                                border-radius:9px;
-                                border:1px solid #942911;
-                                display:inline-block;
-                                cursor:pointer;
-                                color:#ffffff;
-                                font-family:Arial;
-                                font-size:13px;
-                                padding:9px 24px;
-                                text-decoration:none;
-                                text-shadow:0px 1px 0px #854629;" href="mostrar.php" class="btn red">Cancelar</a>
-
+							<a style="box-shadow:inset 0px 1px 0px 0px #cf866c;
+									background:linear-gradient(to bottom, #bb1111 5%, #bc3315 100%);
+									background-color:#bb1111;
+									border-radius:9px;
+									border:1px solid #942911;
+									display:inline-block;
+									cursor:pointer;
+									color:#ffffff;
+									font-family:Arial;
+									font-size:13px;
+									padding:9px 24px;
+									text-decoration:none;
+									text-shadow:0px 1px 0px #854629;" href="listOrders.php" class="btn red">Cancelar
+							</a>
     				</form>
 				</div>
 			</div>
